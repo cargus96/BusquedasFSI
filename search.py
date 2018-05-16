@@ -121,7 +121,7 @@ def ramificacion_y_acotacion(problem, fringe):
     while fringe:
         node = fringe.pop()
         if problem.goal_test(node.state):
-            print "Nodos abiertos: %d " % count
+            print "Nodos expandidos sin heuristica: %d " % count
             return node
         if node.state not in closed:
             count += 1
@@ -145,7 +145,7 @@ def ramificacion_y_acotacion_conH(problem, fringe):
     while fringe:
         node = fringe.pop()
         if problem.goal_test(node.state):
-            print "Nodos expandidos: %d " % count
+            print "Nodos expandidos con heuristica: %d " % count
             return node
         if node.state not in closed:
             count += 1
